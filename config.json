@@ -1,0 +1,9 @@
+{
+  "documents":["docx", "doc", "pptx", "ppt", "pdf", "xlsx", "zip", "7z", "rar"],
+  "images": ["jpg", "jpeg", "png", "svg"],
+  "videos": ["mp4", "3gp"],
+  "designs": ["xd", "fprg", "psd"],
+  "softwares": ["exe", "cso", "iso", "msi", "apk"],
+  "fonts": ["ttf", "otf"],
+  "web": ["html", "css", "js"]
+}
