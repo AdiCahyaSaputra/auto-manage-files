@@ -37,7 +37,7 @@ You can customize the rule whatever do you want!
 "ExampleFolderName": ["rule1", "rule2", "rule3"],
 "music": ["mp3", "m4a", "webm", "wav"]
 ```
-don't forget to add a comma (,) before you add new rule*
+*don't forget to add a comma (,) before you add new rule*
 
 
 Now you will see the magic things. If Error, You Can Move File manually lmao
