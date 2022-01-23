@@ -19,7 +19,9 @@ $ pkg install nodejs-lts
 3. Download the code by clicking "code" (green button at top right. Turn on desktop mode first if you using mobile) then click Download Zip and then extract it
 4. Or if you already install git on your device, you can also clone this repo 
 
-**Start Auto Manage Files (Change Directory First)**
+**Lets Open your Command Prompt / CMD / Termux / etc. Then**
+<br>
+**Start Auto Manage Files (Change Directory First to This Code Folder Path)**
 ```
 $ cd /storage/emulated/0/auto-manage-files
 $ node manageFile.js
