@@ -27,4 +27,15 @@ $ node manageFile.js
 Manage Folder Path : /storage/emulated/0/Download
 ```
 
+Check [config.json](https://github.com/AdiCahyaSaputra/auto-manage-files/blob/main/config.json) Files!
+
+You can customize the rule whatever do you want!
+<br>
+```
+"ExampleFolderName": ["rule1", "rule2", "rule3"],
+"music": ["mp3", "m4a", "webm", "wav"]
+```
+*dont forget to add coma (,) before you add new rule*
+
+
 Now you will see the magic things. If Error, You Can Move File manually lmao
