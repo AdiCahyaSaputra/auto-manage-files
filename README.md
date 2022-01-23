@@ -8,6 +8,8 @@ You need to install Nodejs-LTS first
 2. For Android :
 - Install [Termux](https://f-droid.org/en/packages/com.termux/)
 - Install Nodejs-LTS
+3. Download the code by clicking "code" (green button at top right) and Download Zip and the extract it
+4. Or if you already install git on your device, you can clone this repo
 ```
 $ termux-setup-storage
 
@@ -15,7 +17,7 @@ $ pkg update && pkg upgrade
 
 $ pkg install nodejs-lts
 ```
-- Or see documentaion [Nodejs For Mobile](https://nodejs.org/en/download/package-manager/#android)
+- Or see documentation [Nodejs For Mobile](https://nodejs.org/en/download/package-manager/#android)
 
 **Start Auto Manage Files**
 ```
@@ -35,7 +37,7 @@ You can customize the rule whatever do you want!
 "ExampleFolderName": ["rule1", "rule2", "rule3"],
 "music": ["mp3", "m4a", "webm", "wav"]
 ```
-*dont forget to add coma (,) before you add new rule*
+don't forget to add a comma (,) before you add new rule*
 
 
 Now you will see the magic things. If Error, You Can Move File manually lmao
