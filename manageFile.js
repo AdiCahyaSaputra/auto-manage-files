@@ -1,14 +1,16 @@
 const config = require("./config.json");
-const { existsSync, mkdirSync } = require('fs');
-const fs = require('fs/promises');
+const { existsSync, mkdirSync } = require("fs");
+const fs = require("fs/promises");
+
+const splitChar = "\\"; // windows using backslash
 
 // Get input
-const readline = require('readline').createInterface({
+const readline = require("readline").createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
-readline.question(`Manage Folder Path : `, pathDir => {
+readline.question(`Manage Folder Path : `, (pathDir) => {
   // Just Start The System
   startManage(pathDir);
 
@@ -21,30 +23,28 @@ async function getFilesInDir(pathDir) {
 }
 
 function startManage(pathDir) {
-  let pathDirSplit = pathDir.split("/");
-  pathDirSplit = pathDirSplit[pathDirSplit.length -1];
+  let pathDirSplit = pathDir.split(splitChar);
+  pathDirSplit = pathDirSplit[pathDirSplit.length - 1];
 
   // Promises
-  getFilesInDir(pathDir).then(files => {
+  getFilesInDir(pathDir).then((files) => {
     // sorting rule
     let category = config;
-    
+
     // loop all rules
-    for(const [key, value] of Object.entries(category)) {
+    for (const [key, value] of Object.entries(category)) {
       // loop all files
-      for(let i in files) {
+      for (let i in files) {
         // sort
-        if(sortFiles(value, files[i])) {
+        if (sortFiles(value, files[i])) {
           // move a files
-          const path = `${pathDir}/${key}-${pathDirSplit}`;
+          const path = `${pathDir}${splitChar}${key}-${pathDirSplit}`;
           moveFile(pathDir, path, files[i]);
           console.log(`${key} Files Success To Move!`);
         }
       }
     }
-    
   });
-
 }
 
 // sort file
@@ -66,8 +66,12 @@ function moveFile(pathDir, path, file) {
   }
 
   // if exist
-  return fs.rename(`${pathDir}/${file}`, `${path}/${file}`, function (err) {
-    if (err) throw err;
-    return 'Move file Success!';
-  });
+  return fs.rename(
+    `${pathDir}${splitChar}${file}`,
+    `${path}${splitChar}${file}`,
+    function (err) {
+      if (err) throw err;
+      return "Move file Success!";
+    },
+  );
 }
